@@ -1,24 +1,36 @@
 version: '3'
 
 services:
-  rootconfig:
-    build:
-      context: ./root-config
-      dockerfile: Dockerfile
-    ports:
-      - 9100:80
+  # rootconfig:
+  #   build:
+  #     context: ./root-config
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 9100:80
     
 
-  clients:
-    build:
-      context: ./clients
-      dockerfile: Dockerfile
-    ports:
-      - 9101:80
+  # clients:
+  #   build:
+  #     context: ./clients
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 9101:80
 
-  auth:
+  # auth:
+  #   build:
+  #     context: ./auth
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 9102:80
+
+  dashboard-app:
     build:
-      context: ./auth
+      context: ./dashboard
+      dockerfile: Dockerfile
+
+  dashboard:
+    build:
+      context: ./dashboard/nginx
       dockerfile: Dockerfile
     ports:
-      - 9102:80
+      - 9103:80

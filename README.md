@@ -33,5 +33,8 @@ framework: other
 ```
 
 ## docker and docker-compose
-## SSR
+
+## SSR (WIP)
+`https://single-spa.js.org/docs/ssr-overview`
+
 ## dynamic import maps
